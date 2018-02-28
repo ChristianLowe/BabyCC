@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "hashtable.h"
 #include "your_code.h"
 
 extern FILE* yyin;
@@ -19,6 +20,8 @@ int main(int argc, char**argv)
                  printf("ERROR: Failed to open the input file\n");
                  exit(1);
         }
+
+        ht_init();
 
         // Call the parser. 
         // Add embedded actions to the parser (in BabyC.y) to construct the AST and store its root in gASTRoot. 
